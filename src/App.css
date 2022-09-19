@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
+* {
+    font-family: Ubuntu, serif;
+    font-weight: bold;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    animation:wave 20s infinite linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes wave {
+    0% {
+        transform: translateX(-15%) rotate(180deg);
+    }
+    50% {
+        transform: translateX(-25%) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-15%) rotate(180deg);
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wave svg {
+    background: #003e29;
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 167px;
 }
 
-.App-link {
-  color: #61dafb;
+.wave .shape-fill {
+    fill: #FFFFFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    width: 50px;
+    height: 50px;
 }
+
+.logo-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.project-row {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#section1 {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    background-color: #003e29;
+    color: #467061;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20vh;
+}
+
+#portfolio {
+    font-size: 4vw;
+    color: white;
+}
+
+
+#profilepicture {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin-right: 10%;
+    box-shadow: 0 0 5px 2px white;
+}
+
+#welcome {
+    margin-left: 10%;
+}
+
+#projectslist {
+    background: white;
+    color: #003e29;
+    margin-top: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resume {
+    text-decoration: none;
+}
+
+#site-info {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .project-row {
+        width: 90vw;
+    }
+
+    #projectslist {
+        margin-top: 35vh;
+    }
+
+    .card {
+        width: 48% !important;
+    }
+
+    #section1 {
+        padding-bottom: 50px;
+        height: 30vh;
+    }
+
+    .wave {
+        height: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-row {
+        width: 100vw !important;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .card {
+        margin-bottom: 50px;
+        width: 90vw !important;
+    }
+
+    svg {
+        height: 80px !important;
+    }
+
+    #section1 {
+        padding-bottom: 50px;
+        height: 30vh;
+    }
+
+    #projectslist {
+        margin-top: 35vh;
+    }
+
+    #profilepicture {
+        height: 75px;
+        width: 75px;
+    }
+}
+
