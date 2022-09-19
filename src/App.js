@@ -11,7 +11,7 @@ function App() {
       <>
           <Welcome />
           <Projects />
-          <div id="site-info">Made with React (Bootstrap), served by node and hosted by OVH</div>
+          <div id="site-info">Made with React (Bootstrap), hosted by Netlify</div>
       </>
     );
 }
