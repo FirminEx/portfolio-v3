@@ -1,4 +1,5 @@
 import profilePicture from "../img/profilPicture.png"
+import cv from '../cv.pdf'
 
 function Welcome() {
     return(
@@ -7,7 +8,7 @@ function Welcome() {
           <div id="welcome">
               <div id="portfolio">My Portfolio</div>
               <div id="author">by Firmin Exertier</div>
-              <a id="resume" href="../cv.pdf" download>Download my resume</a>
+              <a id="resume" href={cv} download>Download my resume</a>
           </div>
           <div className="wave">
               <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
